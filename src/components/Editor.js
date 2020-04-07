@@ -10,6 +10,7 @@ import {
   EDITOR_PAGE_UNLOADED,
   UPDATE_FIELD_EDITOR
 } from '../constants/actionTypes';
+import { store } from '../store';
 
 const mapStateToProps = state => ({
   ...state.editor
@@ -40,7 +41,7 @@ class Editor extends React.Component {
     this.changeDescription = updateFieldEvent('description');
     this.changeBody = updateFieldEvent('body');
     this.changeTagInput = updateFieldEvent('tagInput');
-
+    debugger; 
     this.watchForEnter = ev => {
       if (ev.keyCode === 13) {
         ev.preventDefault();
